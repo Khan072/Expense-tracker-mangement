@@ -30,7 +30,7 @@ const TableData = (props) => {
   const handleEditSubmit = async (e) => {
     // e.preventDefault();
 
-    const {data} = await axios.put(`http://localhost:4000/api/v1/updateTransaction/${currId}`, {
+    const {data} = await axios.put(`https://kharchabook.onrender.com/api/v1/updateTransaction/${currId}`, {
       ...values,
     });
 
@@ -50,7 +50,7 @@ const TableData = (props) => {
     console.log(user._id);
     console.log("Clicked button ID delete:", itemKey);
     setCurrId(itemKey);
-    const {data} = await axios.post(`http://localhost:4000/api/v1/deleteTransaction/${itemKey}`,{
+    const {data} = await axios.post(`https://kharchabook.onrender.com/api/v1/deleteTransaction/${itemKey}`,{
       userId: props.user._id,
     });
 

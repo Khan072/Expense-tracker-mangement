@@ -109,7 +109,7 @@ const Home = () => {
     }
     setLoading(true);
 
-    const { data } = await axios.post("http://localhost:4000/api/v1/addTransaction", {
+    const { data } = await axios.post("https://kharchabook.onrender.com/api/v1/addTransaction", {
       title: title,
       amount: amount,
       description: description,
@@ -144,7 +144,7 @@ const Home = () => {
       try {
         setLoading(true);
         console.log(cUser._id, frequency, startDate, endDate, type);
-        const { data } = await axios.post("http://localhost:4000/api/v1/getTransaction", {
+        const { data } = await axios.post("https://kharchabook.onrender.com/api/v1/getTransaction", {
           userId: cUser._id,
           frequency: frequency,
           startDate: startDate,

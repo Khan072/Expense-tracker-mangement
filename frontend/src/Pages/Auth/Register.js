@@ -60,7 +60,7 @@ const Register = () => {
 
       setLoading(false);
      
-      const {data} = await axios.post("http://localhost:4000/api/auth/register", {
+      const {data} = await axios.post("https://kharchabook.onrender.com/api/auth/register", {
         name,
         email,
         password

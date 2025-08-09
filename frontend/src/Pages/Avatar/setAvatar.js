@@ -111,7 +111,7 @@ const SetAvatar = () => {
       const user = JSON.parse(localStorage.getItem("user"));
       // console.log(user);
 
-      const { data } = await axios.post(`http://localhost:4000/api/auth/setAvatar/${user._id}`, {
+      const { data } = await axios.post(`https://kharchabook.onrender.com/api/auth/setAvatar/${user._id}`, {
         image: imgURL[selectedAvatar],
       });
 
